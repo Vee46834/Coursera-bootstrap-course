@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS include-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
+    <!--file in css folder-->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -31,7 +32,8 @@
     </header>
 
     <div class = "container">
-        <div class = "row">
+        <!--row-content=class of css in the css folder-->
+        <div class = "row row-content align-items-center">
             <!--extrasmall=12col small=4col medium=3col-->
             <!--at size larger than small, this content will be order to the last of row-->
             <div class = "col-12 col-sm-4 order-sm-last col-md-3" >
@@ -46,7 +48,7 @@
         </div>
 
 
-        <div class = "row">
+        <div class = "row row-content">
             <div class = "col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -56,7 +58,7 @@
             </div>
         </div>
 
-        <div class = "row">
+        <div class = "row row-content">
             <div class ="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -68,14 +70,14 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class = "container">
             <div class = "row">
                 <!--extra small=4col , small=2col-->
-                <!--content will shift right 1 column-->             
+                <!--offset-1 = content will shift right 1 column-->             
                 <div class = "col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
@@ -93,8 +95,8 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div class = "col-12 col-sm-4">
-                    <div>
+                <div class = "col-12 col-sm-4 align-self-center">
+                    <div class = "text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -104,7 +106,7 @@
                     </div>
                 </div>
            </div>
-           <div class = "row">
+           <div class = "row justify-content-center">
                <!--use column as content fit-->       
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
