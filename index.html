@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    
+
     <!-- Bootstrap CSS include-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!--file in css folder-->
@@ -15,14 +15,40 @@
 </head>
 
 <body>
+    <!--navigetion bar-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
 
-    <header class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
+            <!--on the exsm screen, the navbar will collapse-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--click on logo will go back to home page-->
+            <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+            <div class="colapse navbar-collapse" id="Navbar">
+                <!--set right margin auto-->
+                <ul class="navbar-nav mr-auto">
+                    <!--class inside nav = nav item-->
+                    <!--active = now we are at Home page-->
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
                 <!--extrasmall=12col , small=6col-->
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our
+                        lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <!--extrasmall=12col of new row , small=another 6 column of same row-->
                 <div class="col-12 col-sm">
@@ -31,51 +57,56 @@
         </div>
     </header>
 
-    <div class = "container">
+    <div class="container">
         <!--row-content=class of css in the css folder-->
-        <div class = "row row-content align-items-center">
+        <div class="row row-content align-items-center">
             <!--extrasmall=12col small=4col medium=3col-->
             <!--at size larger than small, this content will be order to the last of row-->
-            <div class = "col-12 col-sm-4 order-sm-last col-md-3" >
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <!--another column left for each size (extraSM = new row , sm=6 , md=9)-->
             <!--at size larger than small, this content will be order to the first of row-->
-            <div class  = "col col-sm order-sm-first col-md"> 
+            <div class="col col-sm order-sm-first col-md">
                 <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives,
+                    ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
             </div>
         </div>
 
 
-        <div class = "row-content">
-            <div class = "col-12 col-sm-4 col-md-3">
+        <div class="row-content">
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class = "col col-sm col-md">
+            <div class="col col-sm col-md">
                 <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers,
+                    six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just
+                    $19.99 per person </p>
             </div>
         </div>
 
-        <div class = "row-content">
-            <div class ="col-12 col-sm-4 order-sm-last col-md-3">
+        <div class="row-content">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
-            <div class ="col col-sm order-sm-first col-md">
+            <div class="col col-sm order-sm-first col-md">
                 <h2>Alberto Somayya</h2>
                 <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                <p>Award winning three-star Michelin chef with wide International experience having worked closely with
+                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                    experiences. </p>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <div class = "container">
-            <div class = "row">
+        <div class="container">
+            <div class="row">
                 <!--extra small=4col , small=2col-->
-                <!--offset-1 = content will shift right 1 column-->             
-                <div class = "col-4 offset-1 col-sm-2">
+                <!--offset-1 = content will shift right 1 column-->
+                <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
@@ -84,20 +115,20 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class = "col-7 col-sm-5">
+                <div class="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <!--class address-->
                     <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              Tel.: +852 1234 5678<br>
-		              Fax: +852 8765 4321<br>
-		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
+                        121, Clear Water Bay Road<br>
+                        Clear Water Bay, Kowloon<br>
+                        HONG KONG<br>
+                        Tel.: +852 1234 5678<br>
+                        Fax: +852 8765 4321<br>
+                        Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                    </address>
                 </div>
-                <div class = "col-12 col-sm-4 align-self-center">
-                    <div class = "text-center">
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -106,13 +137,13 @@
                         <a href="mailto:">Mail</a>
                     </div>
                 </div>
-           </div>
-           <div class = "row justify-content-center">
-               <!--use column as content fit-->       
+            </div>
+            <div class="row justify-content-center">
+                <!--use column as content fit-->
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
-           </div>
+            </div>
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
