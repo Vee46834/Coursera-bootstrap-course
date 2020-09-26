@@ -300,6 +300,15 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <!--pause button stop/play slide animation using Javascript-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
         
             </div>
@@ -430,11 +439,30 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
     <script>
         //javascript function for tooltip(using Jquery)
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
+    </script>
+
+    <!--carousel animation slide setting-->
+    <script>
+        $(document).ready(function(){
+            //set speed slide of carousel to 2000mS
+            $('#mycarousel').carousel({interval:3000});
+
+            //pause slide button
+            $('#carousel-pause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+
+            //play slide button
+            $('#carousel-play').click(function(){
+                $('#mycarousel').carousel('cycle');
+            });
+        })
     </script>
 </body>
 
