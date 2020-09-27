@@ -49,7 +49,7 @@
                 </ul>
                 <!--modal icon on the navbar-->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a data-toggle="modal" id="modalLoginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -59,6 +59,7 @@
     </nav>
 
     <!--modal-->
+    <!--id="loginModal" will call javascript code at the bottom-->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
@@ -123,7 +124,7 @@
                     <!--btn-block=expand button full the entire line-->
                     <!--modal-->
                     <a class="btn btn-warning btn-block" role="button"
-                        data-toggle="modal" data-target="#reserve table">
+                        data-toggle="modal" id="modalButton">
                         Reserve Table
                     </a>
                 </div>
@@ -131,7 +132,8 @@
         </div>
     </header>
 
-    <div id="reserve table" class="modal fade" role="dialog">
+    <!--id="myModal" will call javascript code at the bottom-->
+    <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <!--header of modal = button that click to open it-->
@@ -300,6 +302,7 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    
                     <!--pause button stop/play slide animation using Javascript-->
                     <button class="btn btn-danger btn-sm" id="carouselButton">
                         <span id="carousel-button-icon" class="fa fa-pause"></span>
@@ -435,39 +438,39 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--include js/script.js-->
+    <script src="js/scripts.js"></script>
     
     <script>
         //javascript function for tooltip(using Jquery)
+        //document = apply to all 'data-toggle="tooltip"' in this code
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-
-    <!--carousel animation slide setting-->
+    
+    <!--#loginModal : modal on navbar(login)-->
     <script>
         $(document).ready(function(){
-            //set speed slide of carousel to 3000mS
-            $("#mycarousel").carousel({interval:3000});
+            $('#loginModal').modal('hide');
 
-            //pause slide button
-            $("#carouselButton").click(function(){
-                //if (button-picture == fa-pause) 
-                //{animation=play ; next-click = toggle button-picture>>fa-play, animation=pause}
-                if ($("#carouselButton").children("span").hasClass('fa-pause')){
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                //if (button-picture == fa-play) 
-                //{animation=pause ; next-click = toggle button-picture>>fa-pause, animation=pause}
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');
-                }
-            });
-        })
+            $("#modalLoginButton").click(function(){
+                $('#loginModal').modal('show');
+            })
+        });
     </script>
+
+    <!--#myModal : modal reserve table button-->
+    <script>
+        $(document).ready(function(){
+            $('#myModal').modal('hide');
+
+            $("#modalButton").click(function(){
+                $('#myModal').modal('show');
+            })
+        });
+    </script>
+
 </body>
 
 </html>
