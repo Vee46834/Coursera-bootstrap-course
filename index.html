@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <!-- build:css css/main.css -->
     <!-- Bootstrap CSS include-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!--font-awesome and bootstrap-social-->
@@ -16,6 +17,8 @@
         href="C:\Users\veera\OneDrive\เดสก์ท็อป\coursera\Bootstrap4\conFusion\node_modules\bootstrap-social\bootstrap-social.css">
     <!--file in css folder-->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -434,43 +437,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- build:js js/main.js -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!--include js/script.js-->
     <script src="js/scripts.js"></script>
+    <!-- endbuild -->
     
-    <script>
-        //javascript function for tooltip(using Jquery)
-        //document = apply to all 'data-toggle="tooltip"' in this code
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    
-    <!--#loginModal : modal on navbar(login)-->
-    <script>
-        $(document).ready(function(){
-            $('#loginModal').modal('hide');
-
-            $("#modalLoginButton").click(function(){
-                $('#loginModal').modal('show');
-            })
-        });
-    </script>
-
-    <!--#myModal : modal reserve table button-->
-    <script>
-        $(document).ready(function(){
-            $('#myModal').modal('hide');
-
-            $("#modalButton").click(function(){
-                $('#myModal').modal('show');
-            })
-        });
-    </script>
-
 </body>
 
 </html>

@@ -21,3 +21,27 @@ $(document).ready(function(){
         }
     });
 })
+
+//javascript function for tooltip(using Jquery)
+//document = apply to all 'data-toggle="tooltip"' in this code
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+//#loginModal : modal on navbar(login)
+$(document).ready(function(){
+    $('#loginModal').modal('hide');
+
+    $("#modalLoginButton").click(function(){
+        $('#loginModal').modal('show');
+    })
+});
+
+//#myModal : modal reserve table button
+$(document).ready(function(){
+    $('#myModal').modal('hide');
+
+    $("#modalButton").click(function(){
+        $('#myModal').modal('show');
+    })
+});
